@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+}
+html{
+    font-family: 'Mulish', sans-serif;
+    font-size: 1rem;
+}
+.container{
+    position: relative;
+    min-height: 100vh;
+}
+.container.p-container{
+    background-color: #5BF7DB;
+}
+.bisect{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    background-color:#F8FAFC;
+    transform: skewY(15deg);
+    top: -50%;
+}
+.sec-border{
+    z-index: 10;
+    width: 30%;
+    height: 5px;
+    position: absolute;
+    background-color: #5BF7DB;
+    bottom: 0%;
+}
+.sec-border.left{
+    left: 1%;
+}
+.sec-border.right{
+    right: 1%;
+}
+.modal-box{
+    position: absolute;
+    z-index: 5;
+    background-color:#FFFFFF;
+    top: 50%;
+    left: 50%; /* This will position the left of the div at 50% of its parent container */
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 10px -5px rgba(0,0,0,0.19);
+    padding: 2rem;
+    width: 400px;
+}
+.modal-box.singup{
+    height: 480px;
+}
+.modal-box.profile{
+    height: 400px;
+}
+.modal-box header small {
+    color:#757575;
+    font-size: 0.8rem;
+}
+.modal-box header h1{
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0.5rem 0;
+}
+.card-inputs{
+    display: flex;
+    flex-direction: column;
+}
+.card-inputs input{
+    outline: none;
+    height: 30px;
+    margin: 0.5rem 0;
+    border: 1px solid #a3a1a1;
+    border-radius:6px;
+    padding: 0 6px; 
+}
+.card-inputs label{
+    font-size: 0.8rem;
+}
+.login-btn{
+    outline: none;
+    border-radius: 0.375rem;
+    background: linear-gradient(180deg, #625BF7 0%, #463EEA 100%);
+    border: #625BF7;
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    width: 100%;
+    height:40px;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+    cursor: pointer;
+}
+#logout-btn{
+    margin:-0.5rem 0 !important;
+}
+#error-message{
+    display: none;
+    color: #463EEA;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 2rem;
+}
+#success-message{
+    font-size: 1.25rem;
+    color: #463EEA;
+    font-weight: 600;
+    position: absolute;
+    top: 10%;
+    z-index: 10;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#signup-redirect{
+    position: absolute;
+    bottom: 2%;
+    z-index: 10;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#signup-redirect a{
+    text-decoration: none;
+    color: #463EEA;
+    font-weight: 300;
+}
+
+.profile-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+#profile-info {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    word-wrap: break-word;
+    row-gap: 0.5rem;  
+    font-size: 0.9rem;
+}
+.profile-content header h1{
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+.profile-content img{
+    height: 80px;
+    width: 80px;
+    margin: 1rem;
+}
+@media only screen and (max-width: 600px){
+    .modal-box.signup{
+        width: 350px;
+    }
+    .bisect{
+        transform: skewY(40deg);
+    }
+    .modal-box header h1{
+        font-size: 1.5rem;
+    }
+    .card-inputs input{
+        height: 30px;
+    }
+    .card-inputs label{
+        font-size: 0.6rem;
+    }
+    #error-message{
+        font-size: 0.8rem;
+    }
+    #signup-redirect{
+        bottom:5%;
+    }
+    #success-message{
+        top:20%;
+    }
+    .modal-box.profile{
+        width: 350px;
+    }
+}

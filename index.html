@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container">
+        <form class="modal-box signup">
+            <header>
+                <small>Welcome back! 👏</small>
+                <h1>Sign up to your account</h1>
+            </header>
+            <div class="card-inputs">
+                <label for="name">Your Name</label>
+                <input type="text" name="name" id="name" required />
+            </div>
+            <div class="card-inputs">
+                <label for="email">Your Email</label>
+                <input type="email" name="email" id="email" required />
+            </div>
+            <div class="card-inputs">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required />
+            </div>
+            <div class="card-inputs">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" name="c-password" id="confirmPassword" required />
+            </div>
+            <button type="submit" class="login-btn" id="signup-btn">Continue</button>
+            <p id="error-message"></p>
+        </form>
+        <small id="signup-redirect">Don't have an account? <a href="#">Sign up</a></small>
+        <div class="bisect">
+            <span class="sec-border left"></span>
+            <span class="sec-border right"></span>
+        </div>
+    </section>
+    
+    <script src="signup.js"></script>
+</body>
+</html>
